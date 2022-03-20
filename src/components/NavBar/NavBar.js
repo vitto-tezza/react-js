@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../media/logo.png";
-import Modal from "../../components/Modal/Modal";
 import "./NavBar.css";
 
 function NavBar() {
@@ -23,9 +22,6 @@ function NavBar() {
           <button>CONTACTO</button>
         </li>
       </ul>
-      <div>
-        <Modal />
-      </div>
     </header>
   );
 }

@@ -1,0 +1,14 @@
+.Add {
+  background-color: green;
+  width: 30px;
+  border-radius: 10px;
+}
+.Stock {
+  border: 2px solid black;
+  width: 100px;
+}
+.Remove {
+  background-color: red;
+  width: 30px;
+  border-radius: 10px;
+}
