@@ -1,6 +1,6 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import ListProducts from "./components/ListProducts/ListProducts";
+import ItemList from "./components/ItemList/ItemList";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <NavBar />
       </div>
       <div>
-        <ListProducts />
+        <ItemList />
       </div>
     </div>
   );
