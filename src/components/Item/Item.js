@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Item.css";
 
 export default function Item({ data }) {
@@ -7,9 +8,9 @@ export default function Item({ data }) {
     <div className="CardItem">
       <h2>{title}</h2>
       <img src={`./${Image}`} />
-      <p>precio : $ {price}</p>
-      <p>talle : {size}</p>
-      <button>comprar</button>
+      <button>
+        <Link to={"/product"}>ver producto</Link>
+      </button>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import ItemList from "./components/ItemList/ItemList";
+import DetailPages from "./pages/DetailPages";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -9,7 +11,12 @@ function App() {
         <NavBar />
       </div>
       <div>
-        <ItemList />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ItemList />} />
+            <Route path="/product" element={<DetailPages />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </div>
   );
