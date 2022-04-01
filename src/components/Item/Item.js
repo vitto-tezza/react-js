@@ -7,7 +7,7 @@ export default function Item({ data }) {
   return (
     <div className="CardItem">
       <h2>{title}</h2>
-      <img src={`./${Image}`} />
+      <img className="imgItem" src={`./${Image}`} />
       <button>
         <Link to={"/product"}>ver producto</Link>
       </button>

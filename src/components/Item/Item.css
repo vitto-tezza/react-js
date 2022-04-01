@@ -10,13 +10,7 @@
   background-color: rgba(255, 228, 196, 0.5);
   border-radius: 5px;
 }
-.Counter {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-}
-img {
+.imgItem {
   width: 50%;
 }
 button {

@@ -1,19 +1,4 @@
-.container {
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: antiquewhite;
-}
-.titulo {
-  padding-left: 45%;
-  font-size: 50px;
-}
-.img-product {
-  width: 30%;
+.ContainerDetail {
   display: flex;
   align-items: center;
-  padding-left: 10px;
-}
-.txt {
-  font-size: 25px;
-  padding-left: 60%;
 }

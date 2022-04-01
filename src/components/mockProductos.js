@@ -5,6 +5,7 @@ const mockProductos = [
     Image: "remera1.jpg",
     size: "M",
     price: 2500,
+    stockMax: 5,
   },
 ];
 
