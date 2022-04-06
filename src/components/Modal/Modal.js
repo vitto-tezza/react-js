@@ -6,7 +6,7 @@ export default function Modal() {
   return (
     <Stack spacing={2} direction="row">
       <Button className="CartImg">
-        <img src="carrito.jpg" />
+        <img src="/carrito.jpg" />
       </Button>
     </Stack>
   );

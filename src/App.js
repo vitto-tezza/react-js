@@ -26,8 +26,8 @@ function App() {
             <Route path="/REMERAS" element={<ItemListRemeras />}></Route>
             <Route path="/GORRAS" element={<ItemListgorras />}></Route>
             {/*detalle de productos*/}
-            <Route path="/productRemeras" element={<DetailRemeras />} />
-            <Route path="/productGorras" element={<DetailGorras />} />
+            <Route path="/productRemeras/:id" element={<DetailRemeras />} />
+            <Route path="/productGorras/:id" element={<DetailGorras />} />
           </Routes>
         </BrowserRouter>
       </div>
