@@ -9,7 +9,7 @@ export default function Item({ data }) {
       <h2>{title}</h2>
       <img className="imgItem" src={`./${Image}`} />
       <button>
-        <Link to={"/product"}>ver producto</Link>
+        <Link to={"/productRemeras"}>ver producto</Link>
       </button>
     </div>
   );

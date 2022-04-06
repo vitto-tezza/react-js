@@ -1,20 +1,33 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import ItemList from "./components/ItemList/ItemList";
-import DetailPages from "./pages/DetailPages";
+import ItemListRemeras from "./components/ItemList/ItemListRemeras";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NosotrosPage from "./pages/NosotrosPage";
+import ContactoPage from "./pages/ContactoPage";
+import HomePage from "./pages/HomePage";
+import DetailRemeras from "./pages/DetailRemeras";
+import ItemListgorras from "./components/ItemList/ItemListGorras";
+import TiendaPage from "./pages/TiendaPage";
+import DetailGorras from "./pages/DetailGorras";
 
 function App() {
   return (
     <div className="App">
-      <div className="ContainerHeader">
-        <NavBar />
-      </div>
       <div>
         <BrowserRouter>
+          <NavBar />
           <Routes>
-            <Route path="/" element={<ItemList />} />
-            <Route path="/product" element={<DetailPages />} />
+            {/*NavBar*/}
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/TIENDA" element={<TiendaPage />} />
+            <Route path="/NOSOTROS" element={<NosotrosPage />}></Route>
+            <Route path="/CONTACTO" element={<ContactoPage />}></Route>
+            {/*NavBar de productos*/}
+            <Route path="/REMERAS" element={<ItemListRemeras />}></Route>
+            <Route path="/GORRAS" element={<ItemListgorras />}></Route>
+            {/*detalle de productos*/}
+            <Route path="/productRemeras" element={<DetailRemeras />} />
+            <Route path="/productGorras" element={<DetailGorras />} />
           </Routes>
         </BrowserRouter>
       </div>

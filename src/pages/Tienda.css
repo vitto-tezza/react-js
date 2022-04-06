@@ -1,36 +1,26 @@
-header {
+.NavBarTienda {
   box-sizing: border-box;
-}
-
-header.main-header {
-  width: 100%;
+  width: 40%;
   display: flex;
   padding: 10px 25px;
-  margin-bottom: 3%;
+  margin-left: 55%;
   box-shadow: 1px 5px 15px black;
   justify-content: space-evenly;
   align-items: center;
-  background-color: gray;
+  border-radius: 10px;
+  background-color: rgba(182, 182, 182, 0.671);
 }
 
-img.img-header {
-  width: 30%;
-  border: 2px solid red;
-  border-radius: 8px;
-  margin-left: 15px;
-}
-
-ul.navbar {
+ul {
   list-style: none;
   display: flex;
   width: 70%;
-  margin-right: 20%;
 }
 
-ul.navbar li {
+ul li {
   font-size: 100%;
   color: azure;
   display: flex;
   justify-content: space-evenly;
-  margin-right: 20%;
+  margin-right: 40%;
 }

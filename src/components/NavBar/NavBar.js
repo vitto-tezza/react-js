@@ -1,3 +1,4 @@
+import Modal from "../Modal/Modal";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -10,18 +11,21 @@ function NavBar() {
       </div>
       <ul className="navbar">
         <li>
-          <button>HOME</button>
+          <Link to={"/"}>HOME</Link>
         </li>
         <li>
-          <button>NOSOTROS</button>
+          <Link to={"/NOSOTROS"}>NOSOTROS</Link>
         </li>
         <li>
-          <button>TIENDA</button>
+          <Link to={"/TIENDA"}>TIENDA</Link>
         </li>
         <li>
-          <button>CONTACTO</button>
+          <Link to={"/CONTACTO"}>CONTACTO</Link>
         </li>
       </ul>
+      <div>
+        <Modal />
+      </div>
     </header>
   );
 }

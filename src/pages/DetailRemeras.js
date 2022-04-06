@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail/ItemDetail";
-import mockProductos from "../components/mockProductos";
-import "./DetailPages.css";
+import mockRemeras from "../components/mockRemeras";
+import "./Detail.css";
 
-const DetailPages = () => {
+const DetailRemeras = () => {
   const [products, setProducts] = useState([]);
 
   const getProductos = () => {
     return new Promise((resolve, reject) => {
-      return resolve(mockProductos);
+      return resolve(mockRemeras);
     });
   };
 
@@ -28,4 +28,4 @@ const DetailPages = () => {
   );
 };
 
-export default DetailPages;
+export default DetailRemeras;

@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import Item from "../Item/Item";
-import mockProductos from "../mockProductos";
+import ItemGorras from "../Item/ItemGorras";
+import mockGorras from "../mockGorras";
 import "./ItemList.css";
 
-const ItemList = () => {
+const ItemListGorras = () => {
   const [products, setProducts] = useState([]);
 
   const getProductos = () => {
     return new Promise((resolve, reject) => {
-      return resolve(mockProductos);
+      return resolve(mockGorras);
     });
   };
 
@@ -22,10 +22,10 @@ const ItemList = () => {
     <div className="ContainerProducts">
       {products.map((product) => {
         const { id } = product;
-        return <Item data={product} key={id} />;
+        return <ItemGorras data={product} key={id} />;
       })}
     </div>
   );
 };
 
-export default ItemList;
+export default ItemListGorras;

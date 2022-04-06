@@ -1,6 +1,7 @@
 .Add {
   background-color: green;
   width: 30px;
+  margin: 10%;
   border-radius: 10px;
 }
 .Stock {
@@ -10,5 +11,6 @@
 .Remove {
   background-color: red;
   width: 30px;
+  margin: 10%;
   border-radius: 10px;
 }
