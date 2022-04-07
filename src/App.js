@@ -9,6 +9,7 @@ import DetailRemeras from "./pages/DetailRemeras";
 import ItemListgorras from "./components/ItemList/ItemListGorras";
 import TiendaPage from "./pages/TiendaPage";
 import DetailGorras from "./pages/DetailGorras";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             {/*detalle de productos*/}
             <Route path="/productRemeras/:id" element={<DetailRemeras />} />
             <Route path="/productGorras/:id" element={<DetailGorras />} />
+            {/*Carrito*/}
+            <Route path="/Cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>
       </div>
