@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Item.css";
 
-export default function Item({ data }) {
+export default function Item({ data, action }) {
   const { title, price, size, Image, id } = data;
   return (
     <div className="CardItem">
@@ -11,6 +11,7 @@ export default function Item({ data }) {
       <button>
         <Link to={"/productGorras/" + id}>ver producto</Link>
       </button>
+      <button onClick={action}>agregar al carrito</button>
     </div>
   );
 }
