@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../components/ItemDetail/ItemDetail";
-import mockRemeras from "../components/mockRemeras";
+import mock from "../components/mock";
 import "./Detail.css";
 
-const DetailRemeras = () => {
+const Detail = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
 
   const getProduct = (id) => {
     return new Promise((resolve, reject) => {
-      const remerasFilter = mockRemeras.filter((remera) => id == remera.id);
-      return resolve(remerasFilter[0]);
+      const productFilter = mock.filter((product) => id == product.id);
+      return resolve(productFilter[0]);
     });
   };
 
@@ -28,4 +28,4 @@ const DetailRemeras = () => {
   );
 };
 
-export default DetailRemeras;
+export default Detail;

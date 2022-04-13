@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
-import ItemRemeras from "../Item/ItemRemeras";
-import mockRemeras from "../mockRemeras";
+import Item from "../Item/Item";
+import mock from "../mock";
 import "./ItemList.css";
+import { useParams } from "react-router-dom";
 
-const ItemListRemeras = () => {
+const ItemList = () => {
   const [contador, setContador] = useState(0);
   const [products, setProducts] = useState([]);
+  const { id } = useParams();
 
   const getProductos = () => {
     return new Promise((resolve, reject) => {
-      return resolve(mockRemeras);
+      return resolve(mock);
     });
   };
 
@@ -28,10 +30,10 @@ const ItemListRemeras = () => {
       <h1>contador:{contador}</h1>
       {products.map((product) => {
         const { id } = product;
-        return <ItemRemeras data={product} key={id} action={addToCart} />;
+        return <Item data={product} key={id} action={addToCart} />;
       })}
     </div>
   );
 };
 
-export default ItemListRemeras;
+export default ItemList;

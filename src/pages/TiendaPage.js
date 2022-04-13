@@ -7,10 +7,10 @@ function TiendaPage() {
     <div className="NavBarTienda">
       <ul>
         <li>
-          <Link to={"/REMERAS"}>REMERAS</Link>
+          <Link to={"category/remeras"}>REMERAS</Link>
         </li>
         <li>
-          <Link to={"/GORRAS"}>GORRAS</Link>
+          <Link to={"categori/gorras"}>GORRAS</Link>
         </li>
       </ul>
     </div>

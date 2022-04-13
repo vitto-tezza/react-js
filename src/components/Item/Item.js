@@ -9,7 +9,7 @@ export default function Item({ data, action }) {
       <h2>{title}</h2>
       <img className="imgItem" src={`./${Image}`} />
       <button>
-        <Link to={"/productRemeras/" + id}>ver producto</Link>
+        <Link to={"/product/" + id}>ver producto</Link>
       </button>
       <button onClick={action}>agregar al carrito</button>
     </div>
