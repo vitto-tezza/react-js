@@ -10,7 +10,7 @@ function TiendaPage() {
           <Link to={"category/remeras"}>REMERAS</Link>
         </li>
         <li>
-          <Link to={"categori/gorras"}>GORRAS</Link>
+          <Link to={"category/gorras"}>GORRAS</Link>
         </li>
       </ul>
     </div>

@@ -37,7 +37,7 @@ const mock = [
   },
   {
     category: "remeras",
-    id: 1,
+    id: 5,
     title: "Remera",
     Image: "remera1.jpg",
     size: "X",
@@ -46,7 +46,7 @@ const mock = [
   },
   {
     category: "remeras",
-    id: 2,
+    id: 6,
     title: "Remera",
     Image: "remera2.jpg",
     size: "M",
@@ -55,7 +55,7 @@ const mock = [
   },
   {
     category: "remeras",
-    id: 3,
+    id: 7,
     title: "Remera",
     Image: "remera3.jpg",
     size: "XL",
@@ -64,7 +64,7 @@ const mock = [
   },
   {
     category: "remeras",
-    id: 4,
+    id: 8,
     title: "Remera",
     Image: "remera4.jpg",
     size: "S",

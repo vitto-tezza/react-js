@@ -8,28 +8,27 @@ import Detail from "./pages/Detail";
 import ItemList from "./components/ItemList/ItemList";
 import TiendaPage from "./pages/TiendaPage";
 import Cart from "./pages/Cart";
+import { CartProvider } from "./components/context/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <div>
+      <CartProvider>
         <BrowserRouter>
           <NavBar />
           <Routes>
             {/*NavBar*/}
             <Route path="/" element={<HomePage />}></Route>
-            <Route path="/TIENDA" element={<TiendaPage />} />
+            <Route path="/TIENDA" element={<ItemList />} />
             <Route path="/NOSOTROS" element={<NosotrosPage />}></Route>
             <Route path="/CONTACTO" element={<ContactoPage />}></Route>
-            {/*NavBar de productos*/}
-            <Route path="/categori/:id" element={<ItemList />}></Route>
             {/*detalle de productos*/}
-            <Route path="/product/:category/:id" element={<Detail />} />
+            <Route path="/product/:id" element={<Detail />} />
             {/*Carrito*/}
             <Route path="/Cart" element={<Cart />} />
           </Routes>
         </BrowserRouter>
-      </div>
+      </CartProvider>
     </div>
   );
 }

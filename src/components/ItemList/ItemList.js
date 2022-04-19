@@ -5,9 +5,26 @@ import "./ItemList.css";
 import { useParams } from "react-router-dom";
 
 const ItemList = () => {
-  const [contador, setContador] = useState(0);
   const [products, setProducts] = useState([]);
   const { id } = useParams();
+  const [filtered, setFiltered] = [];
+
+  /* useEffect(() => {
+    setProducts([]);
+    getProductos().then((products) => {
+      category
+        ? filterProductsByCategory(products, category)
+        : setProducts(products);
+    });
+  }, [category]);
+
+  const filterProductsByCategory = (array, category) => {
+    return array.map((product, i) => {
+      if (product.category === category) {
+        return setProducts((products) => [...products, product]);
+      }
+    });
+  };*/
 
   const getProductos = () => {
     return new Promise((resolve, reject) => {
@@ -21,16 +38,11 @@ const ItemList = () => {
     });
   }, []);
 
-  const addToCart = () => {
-    setContador(contador + 1);
-  };
-
   return (
     <div className="ContainerProducts">
-      <h1>contador:{contador}</h1>
       {products.map((product) => {
         const { id } = product;
-        return <Item data={product} key={id} action={addToCart} />;
+        return <Item data={product} key={id} />;
       })}
     </div>
   );

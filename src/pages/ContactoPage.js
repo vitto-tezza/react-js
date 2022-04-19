@@ -4,12 +4,15 @@ import "./Contacto.css";
 const ContactoPage = () => {
   return (
     <form>
-      <input type="text" value="nombre"></input>
+      <p>Ingrese su nombre</p>
+      <input type="text"></input>
       <br></br>
-      <input type="text" value="mail"></input>
+      <p>Ingrese su mail</p>
+      <input type="text"></input>
       <br></br>
       <br></br>
-      <textarea type="text" value="mensaje"></textarea>
+      <p>Ingrese su mensaje</p>
+      <textarea type="text"></textarea>
       <br></br>
       <button>ENVIAR</button>
     </form>

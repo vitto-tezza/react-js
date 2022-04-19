@@ -1,7 +1,8 @@
 import Modal from "../Modal/Modal";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import Item from "../Item/Item";
 
 function NavBar() {
   return (
