@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 const ItemList = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const [filtered, setFiltered] = [];
 
@@ -28,22 +29,30 @@ const ItemList = () => {
 
   const getProductos = () => {
     return new Promise((resolve, reject) => {
-      return resolve(mock);
+      return setTimeout(() => {
+        resolve(mock);
+      }, 2000);
     });
   };
 
   useEffect(() => {
     getProductos().then((data) => {
+      setLoading(false);
       setProducts(data);
     });
   }, []);
 
   return (
     <div className="ContainerProducts">
-      {products.map((product) => {
-        const { id } = product;
-        return <Item data={product} key={id} />;
-      })}
+      {loading ? (
+        <h3>cargando...</h3>
+      ) : (
+        <>
+          {products.map((product) => (
+            <Item data={product} key={product.id} />
+          ))}
+        </>
+      )}
     </div>
   );
 };
