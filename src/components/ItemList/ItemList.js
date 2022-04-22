@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import Item from "../Item/Item";
-import mock from "../mock";
 import "./ItemList.css";
 import { useParams } from "react-router-dom";
+import db from "../../firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemList = () => {
   const [products, setProducts] = useState([]);
@@ -10,29 +11,16 @@ const ItemList = () => {
   const { id } = useParams();
   const [filtered, setFiltered] = [];
 
-  /* useEffect(() => {
-    setProducts([]);
-    getProductos().then((products) => {
-      category
-        ? filterProductsByCategory(products, category)
-        : setProducts(products);
+  const getProductos = async () => {
+    const itemsCollection = collection(db, "productos");
+    const productosSnapshot = await getDocs(itemsCollection);
+    const productList = productosSnapshot.docs.map((doc) => {
+      let product = doc.data();
+      product.id = doc.id;
+      console.log("product:", product);
+      return product;
     });
-  }, [category]);
-
-  const filterProductsByCategory = (array, category) => {
-    return array.map((product, i) => {
-      if (product.category === category) {
-        return setProducts((products) => [...products, product]);
-      }
-    });
-  };*/
-
-  const getProductos = () => {
-    return new Promise((resolve, reject) => {
-      return setTimeout(() => {
-        resolve(mock);
-      }, 2000);
-    });
+    return productList;
   };
 
   useEffect(() => {

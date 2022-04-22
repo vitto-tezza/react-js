@@ -12,7 +12,7 @@ const CartProvider = ({ children }) => {
     );
     if (!exist) {
       setTotalPrice(totalPrice + product.price);
-      setCartProducts((cartProducts) => [...cartProducts, product]);
+      setCartProducts((CartProducts) => [...CartProducts, product]);
     }
   };
 
