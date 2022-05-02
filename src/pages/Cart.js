@@ -1,10 +1,10 @@
-import { Divider, MenuItem } from "@mui/material";
 import React from "react";
 import { useState, useContext } from "react";
 import CartContext from "../components/context/CartContext";
 import ModalBuy from "../components/modalBuy/modalBuy";
 import db from "../firebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
+import "./Cart.css";
 
 const Cart = (data) => {
   const { CartProducts, deleteProduct, totalPrice } = useContext(CartContext);
@@ -51,25 +51,32 @@ const Cart = (data) => {
   };
 
   return (
-    <Divider>
+    <div className="Cart">
       {CartProducts.map((CartProduct) => {
         return (
-          <MenuItem key={CartProduct.id}>
-            <div className="CardItem">
-              <h2>{CartProduct.title}</h2>
-              <img className="imgItem" src={`./${CartProduct.Image}`} />
-              <p>precio : $ {CartProduct.price}</p>
-              <button onClick={() => deleteProduct(CartProduct)}>
-                eliminar
-              </button>
+          <div className="ContainerCart" key={CartProduct.id}>
+            <div className="CartItem">
+              <img className="imgItemCart" src={`./${CartProduct.image}`} />
+              <div id="CartInfo">
+                <h2>{CartProduct.title}</h2>
+                <p>precio : $ {CartProduct.price}</p>
+                <button
+                  className="BtnCartDelete"
+                  onClick={() => deleteProduct(CartProduct)}
+                >
+                  eliminar
+                </button>
+              </div>
             </div>
-          </MenuItem>
+          </div>
         );
       })}
-      <div>
+      <div className="Price">
         <h3>total: ${totalPrice}</h3>
       </div>
-      <button onClick={() => setOpenModal(true)}>Completar Compra</button>
+      <button className="BtnCart" onClick={() => setOpenModal(true)}>
+        Completar Compra
+      </button>
       <ModalBuy handleClose={() => setOpenModal(false)} open={openModal}>
         {successOrder ? (
           <div>
@@ -77,10 +84,11 @@ const Cart = (data) => {
             <p>Su numero de orden es: {successOrder}</p>
           </div>
         ) : (
-          <>
-            <h2>FORM USUARIO</h2>
+          <div className="form">
+            <h2 className="titleForm">INGRESE SUS DATOS</h2>
             <form onSubmit={handleSubmit}>
               <input
+                className="lockers"
                 type="text"
                 name="name"
                 placeholder="Nombre"
@@ -88,6 +96,7 @@ const Cart = (data) => {
                 value={formData.name}
               />
               <input
+                className="lockers"
                 type="number"
                 name="phone"
                 placeholder="Telefono"
@@ -95,6 +104,7 @@ const Cart = (data) => {
                 value={formData.phone}
               />
               <input
+                className="lockers"
                 type="mail"
                 name="email"
                 placeholder="mail"
@@ -102,12 +112,14 @@ const Cart = (data) => {
                 value={formData.email}
               />
 
-              <button type="submit">Enviar</button>
+              <button className="BtnForm" type="submit">
+                Enviar
+              </button>
             </form>
-          </>
+          </div>
         )}
       </ModalBuy>
-    </Divider>
+    </div>
   );
 };
 

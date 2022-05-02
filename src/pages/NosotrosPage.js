@@ -3,7 +3,7 @@ import "./Nosotros.css";
 
 const NosotrosPages = () => {
   return (
-    <div className="Container">
+    <div id="Container">
       <div className="txt">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam illo,
         est odio excepturi quis perspiciatis, voluptatem consequuntur atque

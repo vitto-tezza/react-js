@@ -1,8 +1,7 @@
 .CardItem {
   border: 2px solid rgba(0, 0, 0, 0.5);
-  width: 90%;
+  width: 100%;
   margin-top: 20px;
-  margin-left: 60px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   padding: 10px;
   text-align: center;
@@ -12,10 +11,38 @@
 .imgItem {
   width: 50%;
   margin-right: 10%;
+  margin-bottom: 10px;
 }
-button {
+.BtnItemDetail {
   display: flex;
   align-items: center;
-  width: 50%;
-  margin-left: 25%;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 1px 5px 15px black;
+  transition: 0.3s ease-in-out;
+  will-change: transform;
+}
+.BtnItemDetail:hover {
+  transform: scale(1.05);
+}
+.BtnItemCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: black;
+  font-weight: 600;
+  box-shadow: 1px 5px 15px black;
+  margin-top: 7px;
+  transition: 0.3s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+}
+.BtnItemCarrito:hover {
+  transform: scale(1.05);
+}
+.BtnItemDetail a:any-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
 }

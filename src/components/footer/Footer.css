@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  width: 100%;
+  top: 150px;
+  background-color: gray;
+  box-shadow: 1px 5px 15px black;
+}
+.logo {
+  width: 80px;
+}
+.redes {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.ImgRedes {
+  width: 40px;
+  border: none;
+}
+.ImgLogo {
+  width: 80px;
+  border: none;
+}

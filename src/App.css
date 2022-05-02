@@ -1,7 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+
 .App {
   width: 90%;
   margin-left: 5%;
   box-shadow: 1px 5px 15px black;
-  background-color: rgba(0, 0, 0, 0.715);
-  height: 700px;
+  background-color: #333;
+  padding-bottom: 100px;
+  font-family: "Roboto Mono", monospace;
+}
+#root {
+  background-color: black;
+  min-height: 100vh;
+  height: auto;
+}
+
+button,
+a {
+  font-family: "Roboto Mono", monospace;
 }

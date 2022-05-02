@@ -2,7 +2,6 @@ import Modal from "../Modal/Modal";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import Item from "../Item/Item";
 
 function NavBar() {
   return (
@@ -12,16 +11,24 @@ function NavBar() {
       </div>
       <ul className="navbar">
         <li>
-          <Link to={"/"}>HOME</Link>
+          <Link className="link" to={"/"}>
+            HOME
+          </Link>
         </li>
         <li>
-          <Link to={"/NOSOTROS"}>NOSOTROS</Link>
+          <Link className="link" to={"/NOSOTROS"}>
+            NOSOTROS
+          </Link>
         </li>
         <li>
-          <Link to={"/TIENDA"}>TIENDA</Link>
+          <Link className="link" to={"/TIENDA"}>
+            TIENDA
+          </Link>
         </li>
         <li>
-          <Link to={"/CONTACTO"}>CONTACTO</Link>
+          <Link className="link" to={"/CONTACTO"}>
+            CONTACTO
+          </Link>
         </li>
       </ul>
       <div>

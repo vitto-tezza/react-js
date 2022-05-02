@@ -20,6 +20,7 @@ const CartProvider = ({ children }) => {
     setCartProducts(
       CartProducts.filter((CartProduct) => CartProduct.id !== product.id)
     );
+    setTotalPrice(totalPrice - product.price);
   };
 
   const data = {

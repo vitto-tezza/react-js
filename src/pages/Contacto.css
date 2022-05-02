@@ -4,10 +4,33 @@ form {
   width: 30%;
   margin-left: 35%;
 }
-textarea {
-  height: 100px;
+.titleComents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(193, 158, 225);
 }
-
-button {
+.comentsName {
+  margin-top: 10%;
+  box-shadow: 1px 5px 15px black;
+}
+.comentsPhone {
+  margin-top: 5%;
+  box-shadow: 1px 5px 15px black;
+}
+.comentsMail {
+  margin-top: 5%;
+  box-shadow: 1px 5px 15px black;
+}
+.comentsComents {
+  margin-top: 10%;
+  height: 100px;
+  box-shadow: 1px 5px 15px black;
+}
+.btnComents {
   border-radius: 5px;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
+  box-shadow: 1px 5px 15px black;
 }

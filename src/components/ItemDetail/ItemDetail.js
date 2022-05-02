@@ -3,7 +3,7 @@ import CartContext, { CartProvider } from "../context/CartContext";
 import "./ItemDetail.css";
 
 export default function ItemDetail({ data, action }) {
-  const { title, price, size, Image, stockMax } = data;
+  const { title, price, size, image, descripción } = data;
   const [contador, setContador] = useState(0);
   const { CartProducts, addProductsToCart } = useContext(CartContext);
 
@@ -14,11 +14,13 @@ export default function ItemDetail({ data, action }) {
 
   return (
     <div className="CardItemDetail">
-      <h2>{title}</h2>
-      <img className="imgItem" src={`/${Image}`} />
-      <p>precio : $ {price}</p>
-      <p>talle : {size}</p>
-      <button onClick={addToCart}>agregar al carrito</button>
+      <h2 id="PrimaryInfo">{title}</h2>
+      <img className="imgItem" src={`/${image}`} />
+      <p id="SecondaryInfo">precio : $ {price}</p>
+      <p id="SecondaryInfo">talle : {size}</p>
+      <button className="BtnDetail" onClick={addToCart}>
+        agregar al carrito
+      </button>
     </div>
   );
 }

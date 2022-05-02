@@ -6,8 +6,8 @@ import ContactoPage from "./pages/ContactoPage";
 import HomePage from "./pages/HomePage";
 import Detail from "./pages/Detail";
 import ItemList from "./components/ItemList/ItemList";
-import TiendaPage from "./pages/TiendaPage";
 import Cart from "./pages/Cart";
+import Footer from "./components/footer/Footer";
 import { CartProvider } from "./components/context/CartContext";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
             {/*Carrito*/}
             <Route path="/Cart" element={<Cart />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </div>

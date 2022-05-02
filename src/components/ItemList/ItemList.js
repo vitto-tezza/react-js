@@ -4,6 +4,8 @@ import "./ItemList.css";
 import { useParams } from "react-router-dom";
 import db from "../../firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
+import Stack from "@mui/material/Stack";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const ItemList = () => {
   const [products, setProducts] = useState([]);
@@ -31,13 +33,17 @@ const ItemList = () => {
   }, []);
 
   return (
-    <div className="ContainerProducts">
+    <div className="Container">
       {loading ? (
-        <h3>cargando...</h3>
+        <Stack sx={{ width: "100%", color: "grey.500" }} spacing={2}>
+          <LinearProgress color="success" />
+        </Stack>
       ) : (
         <>
           {products.map((product) => (
-            <Item data={product} key={product.id} />
+            <div className="ContainerProducts">
+              <Item data={product} key={product.id} />
+            </div>
           ))}
         </>
       )}

@@ -1,11 +1,18 @@
+.Container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  border: none;
+  padding: 20px 0;
+  margin-left: 125px;
+}
+
 .ContainerProducts {
   display: flex;
-  margin-right: 5%;
-}
-h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 80vh;
+  flex-direction: row;
+  width: 30%;
+  margin-top: 20px;
 }
